@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content div{
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    background-color: aquamarine;
+    margin:20px;
+    position: relative;
+}
+div button{
+    position: absolute;
+}
+div .delete{
+    display: none;
+    bottom:0;
+    right: -20px; 
+}
+div button:not(.delete){
+    top: 5px;
+    right: 5px;
+    display: none;
+}
+img{
+    width: 100%;
+
+    transition: transform .5s ease-in-out;
+}
+h5, p{
+    font-size: 30px;
+}
+.content div:hover .edit {
+    display: block;
+}
