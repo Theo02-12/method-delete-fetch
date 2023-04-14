@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
-.content div{
+.content div:not(#formEdit){
     width: 400px;
     height: 200px;
     margin: 20px;
@@ -11,7 +10,8 @@
     margin:20px;
     position: relative;
 }
-div button{
+div .delete, .edit, .edit-input{
+    padding: 1px;
     position: absolute;
 }
 div .delete{
@@ -19,7 +19,12 @@ div .delete{
     bottom:0;
     right: -20px; 
 }
-div button:not(.delete){
+div .edit-input{
+    display: none;
+    bottom: 25px;
+    right: -22px;
+}
+div .edit{
     top: 5px;
     right: 5px;
     display: none;
@@ -34,4 +39,17 @@ h5, p{
 }
 .content div:hover .edit {
     display: block;
+}
+#formEdit{
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+input{
+    padding: 30px;
+    margin: 10px;
+}
+form button{
+    width: 90px;
 }
